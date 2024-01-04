@@ -51,8 +51,8 @@ services:
       - pihole
     environment:
       # ⚠️ Required:
-      # Change this to your host's public address
-      - WG_HOST=${MASTER}
+      # Set this in the .env file
+      - WG_HOST=${PUBLIC_IP}
 
       # Optional:
       - PASSWORD=${WG_PASSWORD}
