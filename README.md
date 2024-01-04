@@ -63,7 +63,7 @@ To begin using WireHole, clone the repository and start the containers:
 #!/bin/bash
 
 # Clone the WireHole repository from GitHub
-git clone https://github.com/m-karakus/wirehole.git
+git clone https://github.com/raspberrycoulis/wirehole.git
 
 # Change directory to the cloned repository
 cd wirehole
@@ -75,7 +75,7 @@ nano .env  # Or use any text editor of your choice to edit the .env file
 docker compose up
 ```
 
-Remember to set secure passwords for  `WG_PASSWORD`, and `PIHOLE_PASSWORD` in your `.env` file.
+Remember to set secure passwords for  `WG_PASSWORD`, and `PIHOLE_PASSWORD` as well as updating your `TIMEZONE` and setting your `PUBLIC_IP` address in your `.env` file.
 
 
 
@@ -89,7 +89,8 @@ The `.env` file contains a series of environment variables that are essential fo
 
 *Update the `.env` file.*
 
-- `MASTER` is your public ip or domain.
+- `TIMEZONE` is your timezone - i.e. `Europe/London`
+- `PUBLIC_IP` is your public ip or domain.
 - `WG_PASSWORD` is wireguard UI password.
 - `PIHOLE_PASSWORD` pihole UI password.
 
