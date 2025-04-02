@@ -54,7 +54,7 @@ services:
 
       # Optional:
       - PASSWORD=${WG_PASSWORD}
-      - WG_PORT=51820
+      - WG_PORT=${WG_PORT}
       - WG_DEFAULT_ADDRESS=10.3.0.x
       - WG_DEFAULT_DNS=10.2.0.100
       # - WG_ALLOWED_IPS=192.168.0.0/24,10.2.0.0/24,10.3.0.0/24 # If you want only LAN access open this.
@@ -64,7 +64,7 @@ services:
     volumes:
       - ./wg_confs/:/etc/wireguard
     ports:
-      - "51820:51820/udp"
+      - "${WG_PORT}:${WG_PORT}/udp"
       - "51821:51821/tcp"
     restart: unless-stopped
     cap_add:
