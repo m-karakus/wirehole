@@ -64,7 +64,7 @@ services:
     volumes:
       - ./wg_confs/:/etc/wireguard
     ports:
-      - "${WG_PORT}:${WG_PORT}/udp"
+      - "${WG_PORT}:51820/udp"
       - "51821:51821/tcp"
     restart: unless-stopped
     cap_add:
