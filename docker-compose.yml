@@ -53,13 +53,13 @@ services:
       - WG_HOST=${PUBLIC_IP}
 
       # Optional:
-      - PASSWORD=${WG_PASSWORD}
+      - PASSWORD_HASH=${WG_PASSWORD_HASH}
       - WG_PORT=${WG_PORT}
       - WG_DEFAULT_ADDRESS=10.3.0.x
       - WG_DEFAULT_DNS=10.2.0.100
       # - WG_ALLOWED_IPS=192.168.0.0/24,10.2.0.0/24,10.3.0.0/24 # If you want only LAN access open this.
 
-    image: weejewel/wg-easy:7
+    image: ghcr.io/wg-easy/wg-easy:14
     container_name: wg-easy
     volumes:
       - ./wg_confs/:/etc/wireguard
