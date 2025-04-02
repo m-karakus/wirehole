@@ -92,6 +92,7 @@ The `.env` file contains a series of environment variables that are essential fo
 - `TIMEZONE` is your timezone - i.e. `Europe/London`
 - `PUBLIC_IP` is your public ip or domain.
 - `WG_PASSWORD` is wireguard UI password.
+- `WG_PORT` is wireguard external port useful for blocker ISP like Vodafone Phone Internet.
 - `PIHOLE_PASSWORD` pihole UI password.
 
 ### WireGuard Settings
